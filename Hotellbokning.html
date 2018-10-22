@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <link rel="stylesheet" href="./css/css.css">
+            <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+            <title> STI Hotellbokning </title>
+        </head>	
+        <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1><u> Bokningsformulär </u></h1>
+                </div>
+                <nav>
+                    <h3> Fyll i förmuläret för att boka! </h3>
+                </nav>
+            </div>
+        </header>
+        <article>
+            <form action="http://primat.se/services/sendform.aspx?recipient=Alexander.Johansson97@hotmail.com" method="post">
+            <p>När vill du boka?</p>
+            Från: <input name="date" type="date" placeholder="Välj datum" min="2018-10-23" max="2019-12-31"><br><br>
+            Till: <input name="date" type="date" placeholder="Välj datum" min="2018-10-23" max="2019-12-31"><br><br>
+            Vilken stad söker du hotell/hus i?: 	
+            <input list="Stad">
+            <datalist id="Stad">
+                   <option value="Stockholm">
+                   <option value="Göteborg">
+                   <option value="Malmö">
+                   <option value="Umeå">
+                   <option value="Östersund">
+             </datalist><br><br>
+             Rumtyp:	
+             <select name="Rumtyp">
+                   <option value="">Välj...</option>
+                   <option value="Enkelrum">Enkelrum</option>
+                   <option value="Dubbelrum">Dubbelrum</option>
+                   <option value="Familjerum">Familjerum</option>
+                   <option value="Flera rum">Flera rum</option>
+                </select><br><br>
+            
+	        Antal personer: <input name="antalpersoner" type="antalpersoner" placeholder="0" min="1" max="12"><br><br>
+            Boende typ: 
+            <select>
+				<optgroup label="Hotell">
+				<option>Hotell med 1 stjärna</option>
+                <option>Hotell med 2 stjärnor</option>
+                <option selected>Hotell med 3 stjärnor</option>
+                <option>Hotell med 4 stjärnor</option>
+                <option>Hotell med 5 stjärnor</option>
+				</optgroup>
+				<optgroup label="Hus">
+                <option>1 vånings villa</option>
+                <option>2 vånings villa</option>
+				</optgroup>
+                </select><br><br>
+            Gästbetyg: 
+            <input list="Betyg">
+                <datalist id="Betyg">
+                    <option value="3.5+ Okej">
+                    <option value="5.5+ Bra">
+                    <option value="7.5+ Väldigt Bra">
+                    <option value="8.5+ Utmärkt">
+                    <option value="9.5+ Perfekt">
+                 </datalist><br><br>
+
+            Frukost/Lunch/Middag: 
+                 <br>
+                    <input type="radio" name="Frukost" id="rad1" value="Fruokst"/><label for="rad1">Frukost</label> <br>
+                    <input type="radio" name="Frukost & Lunch" id="rad2" value="Frukost & Lunch"/><label for="rad2" >Frukost & Lunch</label> <br>
+                    <input type="radio" name="Frukost, Lunch & Middag" id="rad3" value="Frukost, Lunch & Middag"/><label for="rad3" >Frukost, Lunch & Middag</label> <br>
+                    <input type="radio" name="Frukost & Middag" id="rad4" value="Frukost & Middag"/><label for="rad4" >Frukost & Middag</label> <br>
+                    <input type="radio" name="Lunch & Middag" id="rad5" value="Lunch & Middag"/><label for="rad5" >Lunch & Middag</label> <br>
+                    <input type="radio" name="Middag" id="rad6" value="Middag"/><label for="rad6" >Middag</label> <br>
+                <br>
+            Val av hyrbil: 	
+            
+            <select name="Hyrbil">
+                    <option value="Ingen">Ingen</option>
+                    <option value="Audi A4">Audi A4</option>
+                    <option value="Audi Q7">Audi Q7</option>
+                    <option value="Tesla P85D">Tesla P85D</option>
+                    <option value="Toyota Yaris">Toyota Yaris</option>
+                    <option value="Volvo XC70">Volvo XC70</option>
+                    <option value="Volvo V70">Volvo V70</option>
+                </datalist>
+            </select>
+            <br><br>
+            Frukost/Lunch/Middag: 
+                 <br>
+                    <input type="radio" name="Prisklass" id="rad1" value="500-1000"/><label for="rad1">500-1000</label> <br>
+                    <input type="radio" name="Prisklass" id="rad2" value="1000-1500"/><label for="rad2" >1000-1500 </label> <br>
+                    <input type="radio" name="Prisklass" id="rad3" value="1500-2000"/><label for="rad3" >1500-2000</label> <br>
+                    <input type="radio" name="Prisklass" id="rad4" value="2000+"/><label for="rad4" >2000+> <br>           
+                <br>     
+
+	        <br>
+	        <input type="checkbox" name="Balkong" id="check1"/>
+            <label for="check1">Jag vill ha balkong</label><br><br>
+            <input type="checkbox" name="Havsutsikt" id="check1"/>
+            <label for="check1">Jag vill ha havsutsikt</label><br><br>
+
+            Planerad incheckning: <input name="time" type="time" placeholder="Välj tid"><br><br>
+
+            Förnamn: <input name="name" type="text" placeholder="Förnamn..."><br><br>
+            Efternamn: <input name="name" type="text" placeholder="Efternamn..."><br><br>	
+            Email: <input name="email" type="email" placeholder="Din email..."><br><br>
+            Telefonnummer: <input name="tel" type="tel" placeholder="Telefonnummer..."><br><br>
+
+            Meddelande: <br>
+             <textarea name="message" placeholder="Meddelande..." rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit" value="Skicka">Skicka</button>
+        </form>
+        <br><br><br><br><br>
+       
+        </article>
+        <footer>
+            <p> STI Hotellbokning &copy; All rights reserved</p>
+        </footer>
+        <body>
+</html>
