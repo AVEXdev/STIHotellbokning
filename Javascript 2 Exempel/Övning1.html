@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+    </head>
+    <body>
+        <div class="ett">
+            <input type="number" Placeholder="Tal 1" name="" id="x">+<input type="number" Placeholder="Tal 2" name="" id="y">
+            <button id="calc">Calculate</button>
+            <p id="svar">Svar: </p>
+        </div>
+        <div class="två">
+            <input type="number" name="" id="a">
+            <button id="bse">Is it bigger,smaller or equals</button>
+            <p id="awns2">Awnser: </p>
+        </div>
+        <div class="tre">
+            <input type="text" name="" id="day">
+            <p id="weekday"></p>
+        </div>
+        <p id="demo"></p>
+        <script>
+            var x = document.querySelector('#x')
+            var y = document.querySelector('#y')
+            var answ = document.getElementById('svar')
+            var answ2 = document.getElementById('svar2')
+            var calc = document.querySelector('#calc')
+            var a = document.querySelector('#a');
+            var bse = document.querySelector('#bse');
+            var day = document.getElementById('day');
+            var weekday = document.getElementById('weekday');
+            calc.addEventListener('click',function calculate(){
+                var sum1, sum2, sum3;
+                    sum1 = (Number(x.value) + Number(y.value));
+                    sum2 = (Number(x.value) - Number(y.value));
+                    sum3 = (Number(x.value) * Number(y.value));
+                    svar.innerHTML = 'Svar:<br>'+sum1+'<br>'+sum2+'<br>'+sum3;
+            });  
+
+            bse.addEventListener('click',function BSE(){
+                a1 = Number(a.value);
+                if(a1 > 100){
+                    awns2.innerHTML = a1 + " större än 100"; 
+                }
+                else if(a1 < 100){
+                    awns2.innerHTML = a1 + " mindre än 100";
+                }
+                else{
+                    awns2.innerHTML = a1 + " lika med 100";
+                }
+            });
+            day.addEventListener('input', function whatDayIsIt(){
+            switch(day.value){
+                case "Måndag":
+                case "måndag":
+                case "testlol":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+1;
+                    break;
+                case "tuesday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+2;
+                    break;
+                case "wensday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+3;
+                    break;
+                case "thursday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+4;
+                    break;
+                case "friday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+5;
+                    break;
+                case "saturday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+6;
+                    break;
+                case "sunday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+7;
+                    break;
+                default:
+                weekday.innerHTML = "Wrong syntax";
+                }
+            });
+
+        </script> 
+    </body>
+</html>

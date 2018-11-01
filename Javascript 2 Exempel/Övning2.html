@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css?" />
+</head>
+<body>
+    <div class="one">
+        
+        <input type="number" Placeholder="Number" name="" id="x">+<input type="number" Placeholder="Number" name="" id="y">
+        <button id="calc">Calc</button>
+        <p id="awns">Awnser: </p>
+
+    </div>
+    <div class="two">
+        
+            <input type="number" name="" id="a">
+            <button id="bse">Is it bigger,smaller or equals</button>
+            <p id="awns2">Awnser: </p>
+                   
+    </div>
+        <div class="three">
+            <input type="text" name="" id="day">
+            <p id="weekday"></p>
+        </div>
+    <div class="four">
+            <textarea name="" id="feild" readonly></textarea>
+    </div>
+        <div class="five">
+            <p id="number"></p>
+        </div>
+        <style>
+            #feild{
+                width: 100px;
+                height: 150px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+        </style>
+    <script>
+        //One
+        var x = document.querySelector('#x');
+        var y = document.querySelector('#y');
+        var calc = document.querySelector('#calc');
+        var awns = document.getElementById('awns');
+        var awns2 = document.getElementById('awns2');
+        //two
+        var a = document.querySelector('#a');
+        var bse = document.querySelector('#bse');
+        //three
+        var day = document.getElementById('day');
+        var weekday = document.getElementById('weekday');
+        //four
+        var textFeild = document.getElementById('feild')
+        looping();
+        //five
+        var number = 65536;
+        divide();
+
+
+        function calculate(){
+           var sum1,sum2,sum3;  
+           sum1 = (Number(x.value) + Number(y.value));
+           sum2 = (Number(x.value) - Number(y.value));
+           sum3 = (Number(x.value) * Number(y.value));
+           awns.innerHTML = 'Awnsers:<br>'+ sum1+'<br>'+sum2+'<br>'+sum3;
+        }
+        //Is z bigger smaller or equals to 100
+        function BSE(){
+            a1 = Number(a.value);
+            if(a1 > 100){
+                awns2.innerHTML = a1 +" bigger than 100";
+            }else if(a1 < 100){
+                awns2.innerHTML = a1 +" smaller than 100";
+            }else{
+                awns2.innerHTML = a1 +" Equals 100";
+            }
+        }
+
+        function whatDayIsIt(){
+            switch(day.value){
+                case "Måndag":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+1;
+                    break;
+                case "tuesday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+2;
+                    break;
+                case "wensday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+3;
+                    break;
+                case "thursday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+4;
+                    break;
+                case "friday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+5;
+                    break;
+                case "saturday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+6;
+                    break;
+                case "sunday":
+                    weekday.innerHTML = "The number representing "+day.value+" is "+7;
+                    break;
+                default:
+                weekday.innerHTML = "Wrong syntax";
+            }
+        }
+        
+        //loops 1 => 100 and prints it into a textarea
+        function looping(){
+            var text = "";
+            for(var x = 1; x < 101; x++){
+                if( x < 50){
+                    text += x + ' < 50'+'\n'; 
+                }else if(x > 50){
+                    text += x + ' > 50'+'\n';
+                }
+                else{
+                    text += x + ' = 50'+`\n`;
+                }
+            }
+            textFeild.innerHTML = text;
+        }
+
+        //Takes number = 65536 and devides it is bigger than 2
+        function divide(){
+            var text = '';
+            while(number > 2){
+                text += number+'\n';
+                number /= 2; 
+            }
+            document.getElementById('number').innerHTML = text;
+            
+        }
+
+        calc.addEventListener('click',calculate);
+        bse.addEventListener('click',BSE);
+        day.addEventListener('input',whatDayIsIt)
+    </script>
+</body>
+</html>

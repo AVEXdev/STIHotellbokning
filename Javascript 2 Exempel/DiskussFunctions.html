@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+            
+        <meta charset="utf-8">  
+        <script>
+
+
+
+function foo_a(ettord) 
+{
+        console.log("foo_a: " + ettord + " " + "test");
+}
+foo_a("hej");
+//--------------------------------------------
+var a = foo_b(4);
+console.log("foo_b: " + a);
+function foo_b(i) 
+{
+        return i * i;
+}
+//--------------------------------------------
+console.log("foo_c: " + foo_c(3, 5) );
+function foo_c(x, y) {
+        return x * y;
+ }
+//--------------------------------------------
+var x = 2;
+var y = 3;
+var a = foo_d(foo_d(x) + foo_d(y));
+console.log("foo_d: " + a);
+function foo_d(i) 
+{
+        return 5 * i;
+}
+//--------------------------------------------
+var a = 5;
+function foo_e(a)
+{
+        a++;
+}
+    a += 2;
+    console.log("foo_e: " + a);
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html> 
